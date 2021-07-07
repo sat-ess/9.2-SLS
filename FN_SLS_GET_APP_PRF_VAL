@@ -1,0 +1,20 @@
+  
+CREATE OR REPLACE FUNCTION SLS.FN_SLS_GET_APP_PRF_VAL(
+    P_COL VARCHAR2 )
+  RETURN VARCHAR2
+IS
+  V_COL_VAL   VARCHAR2 (10);
+  V_QUERY_STR VARCHAR2 (1000);
+BEGIN
+  BEGIN
+    V_QUERY_STR := ' SELECT ' || P_COL || ' FROM app.APP$PRF a';
+    EXECUTE IMMEDIATE V_QUERY_STR INTO V_COL_VAL;
+  EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+    RETURN 'N'; --data not exists for the given parameters
+  WHEN OTHERS THEN
+    RAISE_APPLICATION_ERROR ( -20201, 'Unable to fetch data against given parameters');
+  END;
+  RETURN NVL (V_COL_VAL, 'N') ;
+END;
+/
