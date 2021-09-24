@@ -1,0 +1,19 @@
+--------------------------------------------------------
+--  DDL for Table SLS$POS$WF$LVL
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$POS$WF$LVL" 
+   (	"CLD_ID" VARCHAR2(4 BYTE), 
+	"SLOC_ID" NUMBER(2,0), 
+	"ORG_ID" VARCHAR2(2 BYTE), 
+	"HO_ORG_ID" VARCHAR2(2 BYTE), 
+	"WF_ID" VARCHAR2(40 BYTE), 
+	"LVL_ID" NUMBER(4,0), 
+	"USR_ID_CREATE" NUMBER(4,0), 
+	"USR_ID_CREATE_DT" DATE DEFAULT SYSDATE, 
+	"USR_ID_MOD" NUMBER(4,0), 
+	"USR_ID_MOD_DT" DATE
+   ) ;
+  GRANT UPDATE ON "SLS"."SLS$POS$WF$LVL" TO PUBLIC;
+  GRANT SELECT ON "SLS"."SLS$POS$WF$LVL" TO PUBLIC;
+  GRANT INSERT ON "SLS"."SLS$POS$WF$LVL" TO PUBLIC;

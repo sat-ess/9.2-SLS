@@ -1,0 +1,47 @@
+--------------------------------------------------------
+--  DDL for Table SLS$QUOT$ITM$QC$PARAM
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$QUOT$ITM$QC$PARAM" 
+   (	"CLD_ID" VARCHAR2(4 BYTE), 
+	"SLOC_ID" NUMBER(2,0), 
+	"ORG_ID" VARCHAR2(2 BYTE), 
+	"HO_ORG_ID" VARCHAR2(2 BYTE), 
+	"ITM_ID" VARCHAR2(50 BYTE), 
+	"DOC_ID" VARCHAR2(40 BYTE), 
+	"PARAM_ID" VARCHAR2(20 BYTE), 
+	"PARAM_SPEC" VARCHAR2(100 BYTE), 
+	"PARAM_TYPE" NUMBER(5,0), 
+	"STD_VAL" NUMBER(26,6), 
+	"TLRNC_LOWER" NUMBER(26,6), 
+	"TLRNC_UPPER" NUMBER(26,6), 
+	"TLRNC_TYPE" VARCHAR2(1 BYTE), 
+	"FAIL_ACTN" NUMBER(5,0), 
+	"LOWER_LIMIT" NUMBER(26,6), 
+	"UPPER_LIMIT" NUMBER(26,6), 
+	"USR_ID_CREATE" NUMBER(5,0), 
+	"USR_ID_CREATE_DT" DATE, 
+	"USR_ID_MOD" NUMBER(5,0), 
+	"USR_ID_MOD_DT" DATE, 
+	"ITM_SR_NO" NUMBER(10,0) DEFAULT 1
+   ) ;
+
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."CLD_ID" IS 'Column to store Cld Id';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."SLOC_ID" IS 'Column to store Sloc Id';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."ORG_ID" IS 'Column to store Org Id';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."HO_ORG_ID" IS 'Column to store Ho Org Id';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."ITM_ID" IS 'Column to store Itm Id';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."DOC_ID" IS 'Column to store Quotation Doc Txn Id';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."PARAM_ID" IS 'Column to store QC Param Id';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."PARAM_TYPE" IS 'Column to store QC Parameter Type';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."STD_VAL" IS 'Column to store the standard value of the QC';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."TLRNC_LOWER" IS 'Column to store lower Tolerance Value of QC';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."TLRNC_UPPER" IS 'Column to store upper Tolerance Value of QC';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."TLRNC_TYPE" IS 'Column to store the tolerance Type of QC';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."USR_ID_CREATE" IS 'Column to store User Id Create';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."USR_ID_CREATE_DT" IS 'Column to store User Id Create Dt';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."USR_ID_MOD" IS 'Column to store User Id Modified';
+   COMMENT ON COLUMN "SLS"."SLS$QUOT$ITM$QC$PARAM"."USR_ID_MOD_DT" IS 'Column to store User Id Create Dt';
+  GRANT UPDATE ON "SLS"."SLS$QUOT$ITM$QC$PARAM" TO PUBLIC;
+  GRANT SELECT ON "SLS"."SLS$QUOT$ITM$QC$PARAM" TO PUBLIC;
+  GRANT INSERT ON "SLS"."SLS$QUOT$ITM$QC$PARAM" TO PUBLIC;
