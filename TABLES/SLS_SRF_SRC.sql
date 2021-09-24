@@ -1,0 +1,20 @@
+--------------------------------------------------------
+--  DDL for Table SLS$SRF$SRC
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$SRF$SRC" 
+   (	"CLD_ID" VARCHAR2(20 BYTE), 
+	"SLOC_ID" NUMBER(4,0), 
+	"ORG_ID" VARCHAR2(20 BYTE), 
+	"HO_ORG_ID" VARCHAR2(20 BYTE), 
+	"DOC_ID" VARCHAR2(40 BYTE), 
+	"DOC_ID_SRC" VARCHAR2(40 BYTE), 
+	"ITM_ID" VARCHAR2(40 BYTE), 
+	"ITM_UOM" VARCHAR2(20 BYTE), 
+	"ITM_SR_NO" NUMBER(4,0), 
+	"ITM_QTY" NUMBER(26,6), 
+	"CNTR_QTY" NUMBER(26,6)
+   ) ;
+  GRANT INSERT ON "SLS"."SLS$SRF$SRC" TO PUBLIC;
+  GRANT SELECT ON "SLS"."SLS$SRF$SRC" TO PUBLIC;
+  GRANT UPDATE ON "SLS"."SLS$SRF$SRC" TO PUBLIC;

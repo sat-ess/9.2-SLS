@@ -1,0 +1,24 @@
+--------------------------------------------------------
+--  DDL for Table SLS$SS
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$SS" 
+   (	"CLD_ID" VARCHAR2(4 BYTE), 
+	"SLOC_ID" NUMBER(2,0), 
+	"ORG_ID" VARCHAR2(2 BYTE), 
+	"HO_ORG_ID" VARCHAR2(2 BYTE), 
+	"DOC_ID" VARCHAR2(40 BYTE), 
+	"DOC_DT" DATE, 
+	"SS_ID" VARCHAR2(20 BYTE), 
+	"EO_ID" NUMBER(20,0), 
+	"REMARKS" VARCHAR2(250 BYTE), 
+	"FY_ID" NUMBER(5,0) DEFAULT 1, 
+	"USR_ID_CREATE" NUMBER(4,0), 
+	"USR_ID_CREATE_DT" DATE DEFAULT SYSDATE, 
+	"USR_ID_MOD" NUMBER(4,0), 
+	"USR_ID_MOD_DT" DATE, 
+	"SS_TYPE" NUMBER(5,0) DEFAULT 1015
+   ) ;
+  GRANT SELECT ON "SLS"."SLS$SS" TO PUBLIC;
+  GRANT UPDATE ON "SLS"."SLS$SS" TO PUBLIC;
+  GRANT INSERT ON "SLS"."SLS$SS" TO PUBLIC;
