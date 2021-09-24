@@ -1,0 +1,20 @@
+--------------------------------------------------------
+--  DDL for Table SLS$TRNP$LI$TR$LINES
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$TRNP$LI$TR$LINES" 
+   (	"CLD_ID" VARCHAR2(4 BYTE), 
+	"SLOC_ID" NUMBER(2,0), 
+	"HO_ORG_ID" VARCHAR2(2 BYTE), 
+	"ORG_ID" VARCHAR2(2 BYTE), 
+	"DOC_ID" VARCHAR2(40 BYTE), 
+	"TAX_RULE_ID" NUMBER(10,0), 
+	"TAX_COA_ID" NUMBER(10,0), 
+	"TAX_AMT_SP" NUMBER(26,6), 
+	"TAX_AMT_BS" NUMBER(26,6), 
+	"SR_NO" NUMBER(2,0), 
+	"TAX_ID" NUMBER(10,0)
+   ) ;
+  GRANT INSERT ON "SLS"."SLS$TRNP$LI$TR$LINES" TO PUBLIC;
+  GRANT UPDATE ON "SLS"."SLS$TRNP$LI$TR$LINES" TO PUBLIC;
+  GRANT SELECT ON "SLS"."SLS$TRNP$LI$TR$LINES" TO PUBLIC;
