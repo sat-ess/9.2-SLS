@@ -1,0 +1,17 @@
+--------------------------------------------------------
+--  DDL for Table SLS$INV$LOT$PI$DTLS
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$INV$LOT$PI$DTLS" 
+   (	"CLD_ID" VARCHAR2(4 BYTE), 
+	"SLOC_ID" NUMBER(2,0), 
+	"ORG_ID" VARCHAR2(2 BYTE), 
+	"HO_ORG_ID" VARCHAR2(2 BYTE), 
+	"DOC_ID" VARCHAR2(40 BYTE), 
+	"SR_NO" NUMBER(5,0), 
+	"PI_DOC_ID" VARCHAR2(40 BYTE), 
+	"PI_DISP_ID" VARCHAR2(40 BYTE)
+   ) ;
+  GRANT UPDATE ON "SLS"."SLS$INV$LOT$PI$DTLS" TO PUBLIC;
+  GRANT SELECT ON "SLS"."SLS$INV$LOT$PI$DTLS" TO PUBLIC;
+  GRANT INSERT ON "SLS"."SLS$INV$LOT$PI$DTLS" TO PUBLIC;

@@ -1,0 +1,19 @@
+--------------------------------------------------------
+--  DDL for Table SLS$POS$ATTCH
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$POS$ATTCH" 
+   (	"CLD_ID" VARCHAR2(4 BYTE), 
+	"SLOC_ID" NUMBER(5,0), 
+	"ORG_ID" VARCHAR2(2 BYTE), 
+	"DOC_ID" VARCHAR2(40 BYTE), 
+	"FL_NM" VARCHAR2(50 BYTE), 
+	"FL_EXTN" VARCHAR2(100 BYTE), 
+	"FL_PATH" VARCHAR2(2000 BYTE), 
+	"ATTCH_FL" BFILE, 
+	"DISP_FL_NM" VARCHAR2(50 BYTE), 
+	"REMARKS" VARCHAR2(2000 BYTE)
+   ) ;
+  GRANT UPDATE ON "SLS"."SLS$POS$ATTCH" TO PUBLIC;
+  GRANT SELECT ON "SLS"."SLS$POS$ATTCH" TO PUBLIC;
+  GRANT INSERT ON "SLS"."SLS$POS$ATTCH" TO PUBLIC;

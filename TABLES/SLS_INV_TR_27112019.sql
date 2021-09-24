@@ -1,0 +1,25 @@
+--------------------------------------------------------
+--  DDL for Table SLS$INV$TR_27112019
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$INV$TR_27112019" 
+   (	"CLD_ID" VARCHAR2(4 BYTE), 
+	"SLOC_ID" NUMBER(2,0), 
+	"ORG_ID" VARCHAR2(2 BYTE), 
+	"HO_ORG_ID" VARCHAR2(2 BYTE), 
+	"DOC_ID" VARCHAR2(40 BYTE), 
+	"SR_NO" NUMBER(5,0), 
+	"TAX_RULE_ID" NUMBER(10,0), 
+	"TAX_AMT_SP" NUMBER(26,6), 
+	"TAX_AMT_BS" NUMBER(26,6), 
+	"EXMPT_FLG" VARCHAR2(1 BYTE), 
+	"TAXABLE_AMT" NUMBER(26,6), 
+	"USR_ID_CREATE" NUMBER(4,0), 
+	"USR_ID_CREATE_DT" DATE, 
+	"USR_ID_MOD" NUMBER(4,0), 
+	"USR_ID_MOD_DT" DATE, 
+	"SHIP_ID" VARCHAR2(40 BYTE), 
+	"ITM_ID" VARCHAR2(50 BYTE), 
+	"SO_ID" VARCHAR2(40 BYTE), 
+	"ITM_SR_NO" NUMBER(10,0)
+   ) ;

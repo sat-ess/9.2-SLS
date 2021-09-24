@@ -1,0 +1,18 @@
+--------------------------------------------------------
+--  DDL for Table SLS$POS$USR$ROLE
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$POS$USR$ROLE" 
+   (	"ROLE_ID" NUMBER, 
+	"ROLE_NAME" VARCHAR2(20 BYTE), 
+	"CLD_ID" VARCHAR2(4 BYTE), 
+	"SLOC_ID" NUMBER(2,0), 
+	"ORG_ID" VARCHAR2(2 BYTE), 
+	"HO_ORG_ID" VARCHAR2(2 BYTE), 
+	"PROJ_ID" VARCHAR2(40 BYTE), 
+	"USR_ID" NUMBER(26,0), 
+	"ACT_FLG" VARCHAR2(1 BYTE) DEFAULT 'Y'
+   ) ;
+  GRANT UPDATE ON "SLS"."SLS$POS$USR$ROLE" TO PUBLIC;
+  GRANT SELECT ON "SLS"."SLS$POS$USR$ROLE" TO PUBLIC;
+  GRANT INSERT ON "SLS"."SLS$POS$USR$ROLE" TO PUBLIC;
