@@ -1,0 +1,19 @@
+--------------------------------------------------------
+--  DDL for Trigger TRG_SO$DLV$SCHDL
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "SLS"."TRG_SO$DLV$SCHDL" AFTER--or replace
+UPDATE OR DELETE ON SLS$SO$DLV$SCHDL
+  REFERENCING NEW AS NEW OLD AS OLD
+FOR EACH ROW
+
+BEGIN
+
+IF UPDATING THEN
+  UPDATE SLS.SLS$SO
+  SET USR_ID_MOD_DT=SYSDATE
+  WHERE DOC_ID =:OLD.DOC_ID;
+END IF;
+END;
+/
+ALTER TRIGGER "SLS"."TRG_SO$DLV$SCHDL" ENABLE;

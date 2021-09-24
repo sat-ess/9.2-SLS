@@ -1,0 +1,125 @@
+--------------------------------------------------------
+--  DDL for Trigger TRG_SLS_EO_PRICE_BUILD_HIST
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "SLS"."TRG_SLS_EO_PRICE_BUILD_HIST" BEFORE
+  UPDATE OR
+  DELETE ON SLS.SLS$PRIC$BUILDR$DTL FOR EACH ROW
+
+  BEGIN
+
+
+  IF UPDATING
+  AND (
+   :OLD.ITM_PRICE            <> :new.ITM_PRICE
+  OR :OLD.EFFECTIVE_DT         <> :NEW.EFFECTIVE_DT ) THEN
+
+
+  INSERT
+  INTO SLS$PRIC$BUILDR$DTL$HIST
+    (
+      CLD_ID,
+      SLOC_ID,
+      ORG_ID,
+      HO_ORG_ID,
+      DOC_ID,
+      CATG_ID,
+      ITM_ID,
+      PACK_SIZE,
+      ITM_UOM_BS,
+      PKNG_COST_PR_UNIT,
+      FREIGHT_VAL,
+      ITM_PRICE,
+      ITM_PRICE_OLD,
+      PRICE_PER_BUNDL,
+      PRICE_DIFF_PERC,
+      ITM_PRICE_PER_KG,
+      OLD_ITM_PRICE_PER_KG,
+      PRICE_DIFF_KG_PERC,
+      WEIGHT_PER_KG,
+      EFFECTIVE_DT,
+      HIST_DT,
+      USR_ID_CREATE
+    )
+    VALUES
+    (
+      :OLD.CLD_ID,
+      :OLD.SLOC_ID,
+      :OLD.ORG_ID,
+      :OLD.HO_ORG_ID,
+      :OLD.DOC_ID,
+      :OLD.CATG_ID,
+      :OLD.ITM_ID,
+      :OLD.PACK_SIZE,
+      :OLD.ITM_UOM_BS,
+      :OLD.PKNG_COST_PR_UNIT,
+      :OLD.FREIGHT_VAL,
+    :OLD.ITM_PRICE,
+    :OLD.ITM_PRICE_OLD,
+      :OLD.PRICE_PER_BUNDL,
+      :OLD.PRICE_DIFF_PERC,
+      :OLD.ITM_PRICE_PER_KG,
+      :OLD.OLD_ITM_PRICE_PER_KG,
+      :OLD.PRICE_DIFF_KG_PERC,
+      :OLD.WEIGHT_PER_KG,
+      :OLD.EFFECTIVE_DT,
+      SYSTIMESTAMP,
+      :NEW.USR_ID_MOD
+    );
+ELSIF DELETING THEN
+  INSERT
+  INTO SLS$PRIC$BUILDR$DTL$HIST
+    (
+      CLD_ID,
+      SLOC_ID,
+      ORG_ID,
+      HO_ORG_ID,
+      DOC_ID,
+      CATG_ID,
+      ITM_ID,
+      PACK_SIZE,
+      ITM_UOM_BS,
+      PKNG_COST_PR_UNIT,
+      FREIGHT_VAL,
+      ITM_PRICE,
+      ITM_PRICE_OLD,
+      PRICE_PER_BUNDL,
+      PRICE_DIFF_PERC,
+      ITM_PRICE_PER_KG,
+      OLD_ITM_PRICE_PER_KG,
+      PRICE_DIFF_KG_PERC,
+      WEIGHT_PER_KG,
+      EFFECTIVE_DT,
+      HIST_DT,USR_ID_CREATE
+    )
+    VALUES
+    (
+      :OLD.CLD_ID,
+      :OLD.SLOC_ID,
+      :OLD.ORG_ID,
+      :OLD.HO_ORG_ID,
+      :OLD.DOC_ID,
+      :OLD.CATG_ID,
+      :OLD.ITM_ID,
+      :OLD.PACK_SIZE,
+      :OLD.ITM_UOM_BS,
+      :OLD.PKNG_COST_PR_UNIT,
+      :OLD.FREIGHT_VAL,
+      :OLD.ITM_PRICE,
+      :OLD.ITM_PRICE_OLD,
+      :OLD.PRICE_PER_BUNDL,
+      :OLD.PRICE_DIFF_PERC,
+      :OLD.ITM_PRICE_PER_KG,
+      :OLD.OLD_ITM_PRICE_PER_KG,
+      :OLD.PRICE_DIFF_KG_PERC,
+      :OLD.WEIGHT_PER_KG,
+      :OLD.EFFECTIVE_DT,
+      SYSTIMESTAMP,
+      :NEW.USR_ID_MOD
+    );
+END IF;
+END TRG_SLS_EO_PRICE_BUILD_HIST;
+
+
+/
+ALTER TRIGGER "SLS"."TRG_SLS_EO_PRICE_BUILD_HIST" ENABLE;
