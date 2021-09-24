@@ -1,0 +1,23 @@
+--------------------------------------------------------
+--  DDL for Table TMP_COUR_DTL
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."TMP_COUR_DTL" 
+   (	"CITY" VARCHAR2(250 BYTE), 
+	"STATE" VARCHAR2(250 BYTE), 
+	"ZONE" VARCHAR2(250 BYTE), 
+	"PIN_CODE" VARCHAR2(250 BYTE), 
+	"COURIER_MODE" VARCHAR2(250 BYTE), 
+	"DOCUMENT" VARCHAR2(250 BYTE), 
+	"RATE_PER_KG" NUMBER, 
+	"MINIMUM_AMT" NUMBER, 
+	"COD" VARCHAR2(2 BYTE), 
+	"COD_CHARGES" NUMBER, 
+	"OTHER_CHARGES" NUMBER, 
+	"FUEL_SC" NUMBER, 
+	"FOV" NUMBER, 
+	"COURIER_NM" VARCHAR2(250 BYTE), 
+	"FOV_MIN" NUMBER(26,6), 
+	"EO_ID" NUMBER(10,0), 
+	"COURIER_TEXT" VARCHAR2(1000 BYTE)
+   ) ;
