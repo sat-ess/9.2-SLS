@@ -1,0 +1,16 @@
+--------------------------------------------------------
+--  DDL for Table SLS$DSH$TOPN$PRODCT
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$DSH$TOPN$PRODCT" 
+   (	"CLD_ID" VARCHAR2(4 BYTE), 
+	"SLOC_ID" NUMBER(2,0), 
+	"ORG_ID" VARCHAR2(2 BYTE), 
+	"HO_ORG_ID" VARCHAR2(2 BYTE), 
+	"ITM_ID" VARCHAR2(50 BYTE), 
+	"ITM_NM" VARCHAR2(250 BYTE), 
+	"TOT_AMT" NUMBER(26,6)
+   ) ;
+  GRANT INSERT ON "SLS"."SLS$DSH$TOPN$PRODCT" TO PUBLIC;
+  GRANT SELECT ON "SLS"."SLS$DSH$TOPN$PRODCT" TO PUBLIC;
+  GRANT UPDATE ON "SLS"."SLS$DSH$TOPN$PRODCT" TO PUBLIC;

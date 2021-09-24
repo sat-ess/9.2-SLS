@@ -1,0 +1,32 @@
+--------------------------------------------------------
+--  DDL for Table SLS$DC$LOG
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$DC$LOG" 
+   (	"CLD_ID" VARCHAR2(4 BYTE), 
+	"SLOC_ID" NUMBER(2,0), 
+	"HO_ORG_ID" VARCHAR2(2 BYTE), 
+	"ORG_ID" VARCHAR2(2 BYTE), 
+	"DOC_ID" VARCHAR2(40 BYTE), 
+	"STAGE_ID" NUMBER(5,0), 
+	"REMARKS" VARCHAR2(1000 BYTE), 
+	"USR_ID_CREATE" NUMBER(4,0), 
+	"USR_ID_CREATE_DT" DATE, 
+	"SR_NO" NUMBER(10,0), 
+	"LOCATION" VARCHAR2(100 BYTE), 
+	"STG_PERC" NUMBER(26,6) DEFAULT 0, 
+	"STAGE_DT" DATE
+   ) ;
+
+   COMMENT ON COLUMN "SLS"."SLS$DC$LOG"."CLD_ID" IS 'To store Cld Id';
+   COMMENT ON COLUMN "SLS"."SLS$DC$LOG"."SLOC_ID" IS 'To store Sloc Id';
+   COMMENT ON COLUMN "SLS"."SLS$DC$LOG"."HO_ORG_ID" IS 'To store Ho Org Id';
+   COMMENT ON COLUMN "SLS"."SLS$DC$LOG"."ORG_ID" IS 'To store Org Id';
+   COMMENT ON COLUMN "SLS"."SLS$DC$LOG"."DOC_ID" IS 'To store Doc Id';
+   COMMENT ON COLUMN "SLS"."SLS$DC$LOG"."STAGE_ID" IS 'To store Stage Id';
+   COMMENT ON COLUMN "SLS"."SLS$DC$LOG"."REMARKS" IS 'To store remarks';
+   COMMENT ON COLUMN "SLS"."SLS$DC$LOG"."SR_NO" IS 'To store sr no';
+   COMMENT ON COLUMN "SLS"."SLS$DC$LOG"."LOCATION" IS 'To store location by user';
+  GRANT UPDATE ON "SLS"."SLS$DC$LOG" TO PUBLIC;
+  GRANT SELECT ON "SLS"."SLS$DC$LOG" TO PUBLIC;
+  GRANT INSERT ON "SLS"."SLS$DC$LOG" TO PUBLIC;

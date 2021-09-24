@@ -1,0 +1,20 @@
+--------------------------------------------------------
+--  DDL for Table SLS$DC$CUST$LANG
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$DC$CUST$LANG" 
+   (	"CLD_ID" VARCHAR2(4 BYTE), 
+	"SLOC_ID" NUMBER(2,0), 
+	"HO_ORG_ID" VARCHAR2(2 BYTE), 
+	"ORG_ID" VARCHAR2(2 BYTE), 
+	"DOC_ID" VARCHAR2(40 BYTE), 
+	"LANG_ID" NUMBER(5,0), 
+	"USR_ID_CREATE" NUMBER(4,0), 
+	"USR_ID_CREATE_DT" DATE, 
+	"USR_ID_MOD" NUMBER(4,0), 
+	"USR_ID_MOD_DT" DATE, 
+	"CNTRY_ID" NUMBER(5,0)
+   ) ;
+  GRANT INSERT ON "SLS"."SLS$DC$CUST$LANG" TO PUBLIC;
+  GRANT SELECT ON "SLS"."SLS$DC$CUST$LANG" TO PUBLIC;
+  GRANT UPDATE ON "SLS"."SLS$DC$CUST$LANG" TO PUBLIC;

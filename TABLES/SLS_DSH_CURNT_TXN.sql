@@ -1,0 +1,16 @@
+--------------------------------------------------------
+--  DDL for Table SLS$DSH$CURNT$TXN
+--------------------------------------------------------
+
+  CREATE TABLE "SLS"."SLS$DSH$CURNT$TXN" 
+   (	"CLD_ID" VARCHAR2(4 BYTE), 
+	"SLOC_ID" NUMBER(2,0), 
+	"HO_ORG_ID" VARCHAR2(2 BYTE), 
+	"ORG_ID" VARCHAR2(2 BYTE), 
+	"TRANS_TYPE" VARCHAR2(11 BYTE), 
+	"TODAY_AMT" NUMBER(26,6), 
+	"YESTURDAY_AMT" NUMBER(26,6)
+   ) ;
+  GRANT INSERT ON "SLS"."SLS$DSH$CURNT$TXN" TO PUBLIC;
+  GRANT SELECT ON "SLS"."SLS$DSH$CURNT$TXN" TO PUBLIC;
+  GRANT UPDATE ON "SLS"."SLS$DSH$CURNT$TXN" TO PUBLIC;
